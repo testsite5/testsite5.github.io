@@ -1,0 +1,115 @@
+<p1>code<br>import math
+Tan = 'Tan'
+Sin = 'Sin'
+Cos = 'Cos'
+Pyth = 'Pyth'
+TestTri = 'testTri'
+
+def testTri():
+	a = float(input("Side A Length??:"+" "))
+	b = float(input("Side B Length??:"+" "))
+	c = float(input("Side C Length??:"+" "))
+	if b + a > c and b - a < c:
+		print "   "
+		print "Yes it's a triangle you baffoon"
+		if b**2 + a**2 == c**2:
+			print "It's a Right Triangle"
+		if b**2 + a**2 > c**2:
+			print "It's an Acute Triangle"
+		if b**2 + a**2 < c**2:
+			print "It's an Obtuse Triangle"
+	else:
+		print "Not a triangle"
+
+def pyth():
+	a = input("Which side are you trying to find A = 1 B = 2 C = 3??:"+" ")
+	if a == 1:
+		b = input("Legth of B??:"+" ")
+		c = input("Legth of C??:"+" ")
+		print math.sqrt((c**2)-(b**2))
+	if a == 2:
+		a = input("Legth of A??:"+" ")
+		c = input("Legth of C??:"+" ")
+		print math.sqrt((c**2)-(a**2))
+	if a == 3:
+		a = input("Legth of A??:"+" ")
+		b = input("Legth of B??:"+" ")
+		print math.sqrt((a**2)+(b**2))
+
+def sin():
+  a = input("Find angle = 1 or Find side = 2 or just sin = 3??:"+" ")
+  if a == 3:
+	  b = input("Sin of what number??:"+" ")
+	  print math.sin(math.radians(b))
+  elif a == 1:
+		d = input("Opposite legth??:"+" ")
+		e = input("Hypotenuse legth??:"+" ")
+		print math.degrees(math.asin(float(d)/e))
+  elif a == 2:
+		d = input("Which side do you know Opposite = 1, Hypotenuse = 2??:"+" ")
+		if d == 2:
+			e = input("Legth of Hypotenuse??:"+" ")
+			f = input("Angle size??:"+" ")
+			print (math.sin(math.radians(f)))*e
+		elif d == 1:
+			e = input("Legth of Opposite??:"+" ")
+			f = input("Angle size??:"+" ")
+			print e/(math.sin(math.radians(f)))
+
+def cos():
+  a = input("Find angle = 1 or Find side = 2 or just cos = 3??:"+" ")
+  if a == 3:
+		b = input("Cos of what number??:"+" ")
+		print math.cos(math.radians(b))
+  elif a == 1:
+		d = input("Adjacent length??:"+" ")
+		e = input("Hypotenuse legth??:"+" ")
+		print math.degrees(math.acos(float(d)/e))
+  elif a == 2:
+		d = input("Which side do you know Adjacent = 1, Hypotenus = 2??:"+" ")
+		if d == 2:
+			e = input("Legth of Hypotenuse??:"+" ")
+			f = input("Angle size??:"+" ")
+			print (math.cos(math.radians(f)))*e
+		elif d == 1:
+			e = input("Legth of Adjacent??:"+" ")
+			f = input("Angle size??:"+" ")
+			print e/(math.cos(math.radians(f)))
+
+def tan():
+  a = input("Find angle = 1 or Find side = 2 or just tan = 3??:"+" ")
+  if a == 3:
+		b = input("Tan of what number??:"+" ")
+		print math.tan(math.radians(b))
+  elif a == 1:
+		d = input("Opposite length??:"+" ")
+		e = input("Adjacent  legth??:"+" ")
+		print math.degrees(math.atan(float(d)/e))
+  elif a == 2:
+		d = input("Which side do you know Adjacent = 1, Opposite = 2??:"+" ")
+		if d == 2:
+			e = input("Legth of Opposite??:"+" ")
+			f = input("Angle size??:"+" ")
+			print e/(math.tan(math.radians(f)))
+		elif d == 1:
+			e = input("Legth of Adjacent??:"+" ")
+			f = input("Angle size??:"+" ")
+			print e*(math.tan(math.radians(f)))
+
+
+while 1==1:
+	print "    "
+	print "Function Choices: Sin, Cos, Tan, Pythagorean Theorem(pyth),"
+	print "or test if a triangle with side legths(TestTri)"
+	print "Make sure to capitalize!!!"
+	h = input("What Function would you like to use:"+" ")
+	if h == 'Sin':
+		sin()
+	if h == 'Cos':
+		cos()
+	if h == 'Tan':
+		tan()
+	if h == 'Pyth':
+		pyth()
+	if h == 'testTri':
+		testTri()</p1>
